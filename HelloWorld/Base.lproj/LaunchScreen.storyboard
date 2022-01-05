@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,36 +12,46 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="qUR-oN-xYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="i7E-zI-qD3">
-                                <rect key="frame" x="9" y="24" width="302" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.28077527619999998" green="0.99605187439999998" blue="0.078781374160000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vf-jR-omA">
+                                <rect key="frame" x="22" y="53" width="384" height="395"/>
+                                <color key="backgroundColor" red="0.12300225086599292" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </view>
-                            <view contentMode="scaleToFill" id="dyX-N9-kLW">
-                                <rect key="frame" x="9" y="241" width="302" height="208"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.9960518743574005" green="0.085132404988339169" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="El9-E5-oIk">
+                                <rect key="frame" x="22" y="471" width="384" height="395"/>
+                                <color key="backgroundColor" red="1" green="0.13179487698933301" blue="0.027080057992461382" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="0de-GA-aai"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="4vf-jR-omA" firstAttribute="top" secondItem="0de-GA-aai" secondAttribute="top" constant="9" id="2yq-3c-liW"/>
+                            <constraint firstItem="El9-E5-oIk" firstAttribute="top" secondItem="4vf-jR-omA" secondAttribute="bottom" constant="23" id="G8h-kS-fIS"/>
+                            <constraint firstItem="4vf-jR-omA" firstAttribute="leading" secondItem="0de-GA-aai" secondAttribute="leading" constant="22" id="KUs-qm-NEO"/>
+                            <constraint firstItem="0de-GA-aai" firstAttribute="trailing" secondItem="4vf-jR-omA" secondAttribute="trailing" constant="22" id="OtP-qw-W7L"/>
+                            <constraint firstItem="El9-E5-oIk" firstAttribute="height" secondItem="4vf-jR-omA" secondAttribute="height" id="TZo-ia-a8h"/>
+                            <constraint firstItem="0de-GA-aai" firstAttribute="bottom" secondItem="El9-E5-oIk" secondAttribute="bottom" constant="26" id="dTQ-VI-3uC"/>
+                            <constraint firstItem="4vf-jR-omA" firstAttribute="leading" secondItem="0de-GA-aai" secondAttribute="leading" constant="22" id="ia8-hT-Xq9"/>
+                            <constraint firstItem="El9-E5-oIk" firstAttribute="leading" secondItem="0de-GA-aai" secondAttribute="leading" constant="22" id="iel-C7-8Wn"/>
+                            <constraint firstItem="El9-E5-oIk" firstAttribute="width" secondItem="4vf-jR-omA" secondAttribute="width" id="rhF-Ac-Uit"/>
+                            <constraint firstItem="0de-GA-aai" firstAttribute="trailing" secondItem="El9-E5-oIk" secondAttribute="trailing" constant="22" id="roB-nZ-k3R"/>
+                            <constraint firstItem="0de-GA-aai" firstAttribute="trailing" secondItem="4vf-jR-omA" secondAttribute="trailing" constant="22" id="sys-SE-sRn"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.33035714285711"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
