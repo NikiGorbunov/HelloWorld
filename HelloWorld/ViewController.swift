@@ -7,13 +7,62 @@
 
 import UIKit
 
+enum ColorSquare {
+    case red
+    case yellow
+    case green
+}
+
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var redSquareView: UIView!
+    @IBOutlet weak var yellowSquareView: UIView!
+    @IBOutlet weak var greenSquareView: UIView!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    var colorSquare = ColorSquare.red
+    
+    let squareIsOn: CGFloat = 1
+    let squareIsOff: CGFloat = 0.3
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        startButton.layer.cornerRadius = 10
+        
+        redSquareView.alpha = squareIsOff
+        yellowSquareView.alpha = squareIsOff
+        greenSquareView.alpha = squareIsOff
+        
+        redSquareView.layer.cornerRadius = 50
+        yellowSquareView.layer.cornerRadius = 50
+        greenSquareView.layer.cornerRadius = 50
+        
     }
 
-
+    
+    @IBAction func startButtonPressed() {
+        
+        startButton.setTitle("NEXT", for: .normal)
+        
+        switch colorSquare {
+        case .red:
+            redSquareView.alpha = squareIsOn
+            greenSquareView.alpha = squareIsOff
+            colorSquare = .yellow
+        case .yellow:
+            redSquareView.alpha = squareIsOff
+            yellowSquareView.alpha = squareIsOn
+            colorSquare = .green
+        case .green:
+            yellowSquareView.alpha = squareIsOff
+            greenSquareView.alpha = squareIsOn
+            colorSquare = .red
+        }
+        
+    }
+    
 }
 
