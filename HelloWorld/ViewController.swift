@@ -36,15 +36,15 @@ class ViewController: UIViewController {
         yellowSquareView.alpha = squareIsOff
         greenSquareView.alpha = squareIsOff
         
-        redSquareView.layer.cornerRadius = 50
-        yellowSquareView.layer.cornerRadius = 50
-        greenSquareView.layer.cornerRadius = 50
-        
     }
 
+    override func viewWillLayoutSubviews() {
+        redSquareView.layer.cornerRadius = redSquareView.frame.width / 2
+        yellowSquareView.layer.cornerRadius = redSquareView.frame.width / 2
+        greenSquareView.layer.cornerRadius = redSquareView.frame.width / 2
+    }
     
     @IBAction func startButtonPressed() {
-        
         startButton.setTitle("NEXT", for: .normal)
         
         switch colorSquare {
